@@ -6,36 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		181CB4EF2E0EBD9C005A292A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 181CB4EE2E0EBD9C005A292A /* Lottie */; };
+		181CB4F12E0EBD9F005A292A /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB4F02E0EBD9F005A292A /* confetti.json */; };
+		185BB3CE2E0D5A66004A9DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185BB3C52E0D5A66004A9DCD /* Assets.xcassets */; };
+		185BB3D02E0D5A66004A9DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185BB3C82E0D5A66004A9DCD /* LaunchScreen.storyboard */; };
+		185BB3D12E0D5A66004A9DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185BB3CA2E0D5A66004A9DCD /* Main.storyboard */; };
+		185BB3D22E0D5A66004A9DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BB3C42E0D5A66004A9DCD /* AppDelegate.swift */; };
+		185BB3D32E0D5A66004A9DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BB3CB2E0D5A66004A9DCD /* SceneDelegate.swift */; };
+		185BB3D42E0D5A66004A9DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BB3CC2E0D5A66004A9DCD /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		181CB4F02E0EBD9F005A292A /* confetti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
 		185BB3AC2E0D5A10004A9DCD /* PasswordLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185BB3C42E0D5A66004A9DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		185BB3C52E0D5A66004A9DCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		185BB3C62E0D5A66004A9DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185BB3C72E0D5A66004A9DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		185BB3C92E0D5A66004A9DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		185BB3CB2E0D5A66004A9DCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		185BB3CC2E0D5A66004A9DCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		185BB3BE2E0D5A12004A9DCD /* Exceptions for "PasswordLock" folder in "PasswordLock" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 185BB3AB2E0D5A10004A9DCD /* PasswordLock */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		185BB3AE2E0D5A10004A9DCD /* PasswordLock */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				185BB3BE2E0D5A12004A9DCD /* Exceptions for "PasswordLock" folder in "PasswordLock" target */,
-			);
-			path = PasswordLock;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		185BB3A92E0D5A10004A9DCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181CB4EF2E0EBD9C005A292A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +44,7 @@
 		185BB3A32E0D5A10004A9DCD = {
 			isa = PBXGroup;
 			children = (
-				185BB3AE2E0D5A10004A9DCD /* PasswordLock */,
+				185BB3CD2E0D5A66004A9DCD /* PasswordLock */,
 				185BB3AD2E0D5A10004A9DCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +55,21 @@
 				185BB3AC2E0D5A10004A9DCD /* PasswordLock.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		185BB3CD2E0D5A66004A9DCD /* PasswordLock */ = {
+			isa = PBXGroup;
+			children = (
+				185BB3C42E0D5A66004A9DCD /* AppDelegate.swift */,
+				185BB3CB2E0D5A66004A9DCD /* SceneDelegate.swift */,
+				185BB3C82E0D5A66004A9DCD /* LaunchScreen.storyboard */,
+				185BB3CC2E0D5A66004A9DCD /* ViewController.swift */,
+				185BB3CA2E0D5A66004A9DCD /* Main.storyboard */,
+				185BB3C52E0D5A66004A9DCD /* Assets.xcassets */,
+				185BB3C62E0D5A66004A9DCD /* Info.plist */,
+				181CB4F02E0EBD9F005A292A /* confetti.json */,
+			);
+			path = PasswordLock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,11 +87,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				185BB3AE2E0D5A10004A9DCD /* PasswordLock */,
-			);
 			name = PasswordLock;
 			packageProductDependencies = (
+				181CB4EE2E0EBD9C005A292A /* Lottie */,
 			);
 			productName = PasswordLock;
 			productReference = 185BB3AC2E0D5A10004A9DCD /* PasswordLock.app */;
@@ -107,6 +119,9 @@
 			);
 			mainGroup = 185BB3A32E0D5A10004A9DCD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				181CB4ED2E0EBD9C005A292A /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 185BB3AD2E0D5A10004A9DCD /* Products */;
 			projectDirPath = "";
@@ -122,6 +137,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185BB3CE2E0D5A66004A9DCD /* Assets.xcassets in Resources */,
+				181CB4F12E0EBD9F005A292A /* confetti.json in Resources */,
+				185BB3D02E0D5A66004A9DCD /* LaunchScreen.storyboard in Resources */,
+				185BB3D12E0D5A66004A9DCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +151,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185BB3D22E0D5A66004A9DCD /* AppDelegate.swift in Sources */,
+				185BB3D32E0D5A66004A9DCD /* SceneDelegate.swift in Sources */,
+				185BB3D42E0D5A66004A9DCD /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		185BB3C82E0D5A66004A9DCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185BB3C72E0D5A66004A9DCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		185BB3CA2E0D5A66004A9DCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185BB3C92E0D5A66004A9DCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		185BB3C02E0D5A12004A9DCD /* Debug */ = {
@@ -148,11 +189,14 @@
 				DEVELOPMENT_TEAM = B6225A755G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordLock/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = 6sPassword;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,9 +204,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = raaj.PasswordLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -176,11 +224,14 @@
 				DEVELOPMENT_TEAM = B6225A755G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordLock/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = 6sPassword;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,9 +239,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = raaj.PasswordLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -337,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		181CB4ED2E0EBD9C005A292A /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		181CB4EE2E0EBD9C005A292A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 181CB4ED2E0EBD9C005A292A /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 185BB3A42E0D5A10004A9DCD /* Project object */;
 }

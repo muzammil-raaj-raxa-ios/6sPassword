@@ -107,7 +107,6 @@ extension ViewController: UITextFieldDelegate {
 
 
 extension UITextField {
-
     func addBottomBorder(lineColor: UIColor) {
         let bottomline = CALayer()
         bottomline.frame = CGRect(x: 0, y: self.frame.size.height-1, width: self.frame.size.width, height: 1)
@@ -115,5 +114,4 @@ extension UITextField {
         self.borderStyle = .none
         self.layer.addSublayer(bottomline)
     }
-
 }

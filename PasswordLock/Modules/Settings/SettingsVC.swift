@@ -14,24 +14,43 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var privacyBtn: UIButton!
     
-    var listings: [SettingModel] = [
-        SettingModel(title: "Sound Effects", isOn: true),
-        SettingModel(title: "Haptic Feedback", isOn: true),
-        SettingModel(title: "Show Timer", isOn: false),
+    var listings = [
+        SettingModel(title: "Sound Effects", isOn: false),
+        SettingModel(title: "Haptic Feedback", isOn: false),
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         settingTV.delegate = self
         settingTV.dataSource = self
         settingTV.register(UINib(nibName: "SettingCell", bundle: nil), forCellReuseIdentifier: "SettingCell")
         
-        addRoundedBorder(btn: rateBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
-        addRoundedBorder(btn: shareBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
-        addRoundedBorder(btn: privacyBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
+        addRoundedBorderBtn(btn: rateBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
+        addRoundedBorderBtn(btn: shareBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
+        addRoundedBorderBtn(btn: privacyBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
+        
+        // Load settings from UserDefaults
+        loadSettings()
     }
-
+    
+    private func loadSettings() {
+        listings[0].isOn = UserDefaultsManager.shared.tapSoundEnabled
+        listings[1].isOn = UserDefaultsManager.shared.tapHapticEnabled
+        settingTV.reloadData()
+    }
+    
+    private func saveSettings() {
+        UserDefaultsManager.shared.tapSoundEnabled = listings[0].isOn
+        UserDefaultsManager.shared.tapHapticEnabled = listings[1].isOn
+    }
+    
+    @objc private func switchValueChanged(_ sender: UISwitch) {
+        print("Switch tag: \(sender.tag), isOn: \(sender.isOn)")
+        listings[sender.tag].isOn = sender.isOn
+        saveSettings()
+    }
+    
 }
 
 extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
@@ -47,6 +66,11 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         cell.settingLabel.text = item.title
         cell.settingSwitch.isOn = item.isOn
         
+        // Add target for switch value change
+        cell.settingSwitch.removeTarget(nil, action: nil, for: .valueChanged)
+        cell.settingSwitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+        cell.settingSwitch.tag = indexPath.row
+        
         cell.separatorInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
         return cell
@@ -59,5 +83,5 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
 
 struct SettingModel {
     let title: String
-    let isOn: Bool
+    var isOn: Bool
 }

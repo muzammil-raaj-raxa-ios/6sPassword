@@ -15,8 +15,20 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addRoundedBorder(btn: challengeBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
-        addRoundedBorder(btn: practiceBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
+        addRoundedBorderBtn(btn: challengeBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
+        addRoundedBorderBtn(btn: practiceBtn, cornerRadius: 30, borderWidth: 1, borderColor: .white)
+    }
+    
+    @IBAction func challengeBtn(_ sender: Any) {
+        let vc = ChallengeSettingsVC()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func practiceBtn(_ sender: Any) {
+        let vc = PracticeVC()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }

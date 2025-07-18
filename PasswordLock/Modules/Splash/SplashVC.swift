@@ -24,7 +24,6 @@ class SplashVC: UIViewController {
             self.animationView.stop()
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
             if let vc = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC {
                 self.navigationController?.setViewControllers([vc], animated: true)
             }

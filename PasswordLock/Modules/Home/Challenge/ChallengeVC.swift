@@ -149,7 +149,13 @@ class ChallengeVC: BaseViewController {
                 let timeTaken = Date().timeIntervalSince(start)
                 let savedFastest = Double(UserDefaultsManager.shared.fastestTime ?? "0") ?? 0
                 if savedFastest == 0 || timeTaken < savedFastest {
-                    UserDefaultsManager.shared.fastestTime = String(format: "%.1f", timeTaken)
+                    let formattedTime = String(format: "%.1f", timeTaken)
+                    UserDefaultsManager.shared.fastestTime = formattedTime
+                    let sharedDefaults = UserDefaults(suiteName: "group.fastestTime")
+                    sharedDefaults?.set(formattedTime, forKey: "fastestTime")
+                    sharedDefaults?.synchronize()
+                    WidgetCenter.shared.reloadAllTimelines()
+                    print("Widget saved time:", formattedTime)
                 }
             }
         }
@@ -195,6 +201,11 @@ class ChallengeVC: BaseViewController {
         
         if currentAccuracy > savedAccuracy {
             UserDefaultsManager.shared.bestAccuracy = "\(currentAccuracy)%"
+            let sharedDefaults = UserDefaults(suiteName: "group.fastestTime")
+            sharedDefaults?.set(currentAccuracy, forKey: "bestAccuracy")
+            sharedDefaults?.synchronize()
+            WidgetCenter.shared.reloadAllTimelines()
+            print("Widget saved time:", currentAccuracy)
         }
     }
     
@@ -271,9 +282,13 @@ class ChallengeVC: BaseViewController {
                 let timeTaken = Date().timeIntervalSince(start)
                 let savedFastest = Double(UserDefaultsManager.shared.fastestTime ?? "0") ?? 0
                 if savedFastest == 0 || timeTaken < savedFastest {
-                    UserDefaultsManager.shared.fastestTime = String(format: "%.1f", timeTaken)
-                    UserDefaults(suiteName: "group.com.raaj.PasswordLock")?.set("3.5", forKey: "fastestTime")
+                    let formattedTime = String(format: "%.1f", timeTaken)
+                    UserDefaultsManager.shared.fastestTime = formattedTime
+                    let sharedDefaults = UserDefaults(suiteName: "group.fastestTime")
+                    sharedDefaults?.set(formattedTime, forKey: "fastestTime")
+                    sharedDefaults?.synchronize()
                     WidgetCenter.shared.reloadAllTimelines()
+                    print("Widget saved time:", formattedTime)
                 }
             }
         }
